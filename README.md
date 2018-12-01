@@ -22,3 +22,5 @@ Veränderbare Eingaben sind:
 
 "Klickt" man sich aus einem Eingabefeld "heraus",
 werden alle Werte automatisch erneut berechnet (also aktualisiert).
+
+[Hier geht es zum ImmoAnnuRechner](https://rhinodevel.github.io/ImmoAnnuRechner/)
