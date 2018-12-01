@@ -1,19 +1,22 @@
 # ImmoAnnuRechner
 Immobilienfinanzierung per Annuitätendarlehen berechnen.
 
-Eingegeben und beliebig oft verändert werden können:
+Veränderbare Eingaben sind:
 
-- Der Kaufpreis der Immobilie.
-- Die einzelnen Nebenkosten in Prozent des Kaufpreises.
-- Das Eigenkapital.
-- Zinssatz und Anfangstilgung des Annuitätendarlehens.
+- Kaufpreis.
+- Nebenkosten (%).
+- Eigenkapital.
 
-Klickt man sich aus einem Eingabefeld heraus,
-werden alle Werte erneut berechnet (also aktualisiert).
+=> Damit wird das benötigte Fremdkapital berechnet.
 
-U.a. werden berechnet:
+- Zinssatz (%).
+- Anfangstilgung (%).
+
+=> Dadurch werden dann die restlichen Ergebnisse berechnet, u.a.:
 
 - Monatliche Rate.
 - Laufzeit.
 - Gesamtzinsen.
-- ...
+
+"Klickt" man sich aus einem Eingabefeld "heraus",
+werden alle Werte automatisch erneut berechnet (also aktualisiert).
