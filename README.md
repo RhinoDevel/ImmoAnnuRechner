@@ -1,6 +1,8 @@
 # ImmoAnnuRechner
 Immobilienfinanzierung per Annuitätendarlehen berechnen.
 
+![ImmoAnnuRechner](./ImmoAnnuRechner.png)
+
 Veränderbare Eingaben sind:
 
 - Kaufpreis.
