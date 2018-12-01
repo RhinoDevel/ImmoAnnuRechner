@@ -4,7 +4,7 @@ Immobilienfinanzierung per Annuitätendarlehen berechnen.
 Veränderbare Eingaben sind:
 
 - Kaufpreis.
-- Nebenkosten (%).
+- Diverse Nebenkosten (%).
 - Eigenkapital.
 
 => Damit wird das benötigte Fremdkapital berechnet.
