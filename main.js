@@ -177,6 +177,13 @@
                     ],
 
                     [
+                        'Weitere Kosten',
+                        f.ele.createDiv(style.percent, null, 'percent_additionalcosts').outerHTML,
+                        f.ele.input.createHtml(0, 'number', 'val_additionalcosts'),
+                        ''
+                    ],
+
+                    [
                         'Gesamtkosten',
                         f.ele.createDiv(style.percent, null, 'percent_total').outerHTML,
                         f.ele.createDiv(style.val, null, 'val_total').outerHTML,
@@ -300,6 +307,10 @@
         //
         v.ele.taxes.val = document.getElementById('val_taxes');
 
+        v.ele.additionalcosts = {};
+        v.ele.additionalcosts.percent = document.getElementById('percent_additionalcosts');
+        v.ele.additionalcosts.val = document.getElementById('val_additionalcosts');
+
         v.ele.total = {};
         v.ele.total.percent = document.getElementById('percent_total');
         v.ele.total.val = document.getElementById('val_total');
@@ -356,6 +367,7 @@
             percentRedemption = parseFloat(v.ele.redemption.percent.value),
 
             valPrice = parseFloat(v.ele.price.val.value),
+            valAdditionalcosts = parseFloat(v.ele.additionalcosts.val.value),
             valEquity = parseFloat(v.ele.equity.val.value),
 
             valRealtor = valPrice * percentRealtor / 100.0,
@@ -366,17 +378,20 @@
                 + valRealtor
                 + valNotary
                 + valCourtandregistry
-                + valTaxes,
+                + valTaxes
+                + valAdditionalcosts,
             valBorrowing = valTotal - valEquity,
             valInterest = percentInterest * valBorrowing / 100.0,
             valRedemption = percentRedemption * valBorrowing / 100.0,
             valRate = (valInterest + valRedemption) / 12.0,
 
+            percentAdditionalcosts = 100.0 * valAdditionalcosts / valPrice,
             percentTotal = percentPrice
                 + percentRealtor
                 + percentNotary
                 + percentCourtandregistry
-                + percentTaxes,
+                + percentTaxes
+                + percentAdditionalcosts,
             percentEquity = 100.0 * valEquity / valTotal,
             percentBorrowing = 100.0 - percentEquity,
 
@@ -403,6 +418,7 @@
         v.ele.rate.count.textContent = String(countRate.toFixed(1));
         v.ele.years.count.textContent = String(countYears.toFixed(1));
 
+        v.ele.additionalcosts.percent.textContent = String(percentAdditionalcosts.toFixed(4));
         v.ele.total.percent.textContent = String(percentTotal.toFixed(4));
         v.ele.equity.percent.textContent = String(percentEquity.toFixed(4));
         v.ele.borrowing.percent.textContent = String(percentBorrowing.toFixed(4));
@@ -416,6 +432,8 @@
                 v.ele.notary.percent,
                 v.ele.courtandregistry.percent,
                 v.ele.taxes.percent,
+
+                v.ele.additionalcosts.val,
 
                 v.ele.equity.val,
 

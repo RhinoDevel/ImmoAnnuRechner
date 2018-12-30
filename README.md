@@ -7,6 +7,7 @@ Veränderbare Eingaben sind:
 
 - Kaufpreis.
 - Diverse Nebenkosten (%).
+- Weitere Kosten (z.B. zur Renovierung).
 - Eigenkapital.
 
 => Damit wird das benötigte Fremdkapital berechnet.
